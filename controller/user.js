@@ -6,6 +6,10 @@ const jwt = require("jsonwebtoken");
 
 const { get } = require("../routes/user");
 
+exports.userProfile=(req,res,next)=>{
+  models.user.findOne
+}
+
 exports.userList = (req, res, next) => {
   models.user
     .findAll()
@@ -14,22 +18,22 @@ exports.userList = (req, res, next) => {
     })
     .catch((err) => console.log(err));
 };
-//for showing user profile
-exports.userDetail = (req, res, next) => {
-  models.user.findAll(userId).then((user) => {
-    res.send(users);
-  });
-  bcrypt;
-  get
-    .userDetail(this.userList)
-    .create({
-      FirstName: FirstName,
-      LastName: LastName,
-      userName: userName,
-      email: email,
-      Password: hashPassword,
-    })
-    .catch((err) => console.log(err));
+//for showing user Detail
+exports.usersDetail = (req, res, next) => {
+  User.findAll({ attributes: {exclude: ["Password",] }})
+  .then((users) => {
+      res.send(users);
+  })
+  .catch(err => console.log(err));
+};
+
+exports.userProfile = (req, res, next) => {
+  // const uProfile  = req.params.
+  User.findOne( { attributes: {exclude: ["password",] }})
+  .then((users) => {
+      res.send(users);
+  })
+  .catch(err => console.log(err));
 };
 
 exports.updateUser = (req, res, next) => {};
@@ -63,26 +67,29 @@ exports.register = (req, res, next) => {
 };
 
 exports.login = (req, res, next) => {
-  //{"UserName":"jimmy", "password":"123456", "email":"Hazim.Hazimin@gmail.com"}
-  const userName = req.body.userName;
-  const password = req.body.password;
-  let user;
-  console.log(req.body);
-  // bcrypt
-
-  //   return models.user.create({
-  //     userName: userName,
-  //     Password: hashPassword,
-  //   });
-  // })
-  // //.then((user) => {
-  //   res.send(user);
-  // })
-  // .catch((err) => console.log(err));
-
-  exports.userProfile = (req, res, next) => {};
-  //update profile for user
-
+  const email = req.body.email;
+  const Password = req.body.Password;
+  let resultUser;
+  User.findOne({where: {email: email}})
+  .then(user => {
+      resultUser = user;
+  return bcrypt.compare(password, user.password);
+     
+  })
+  .then((match) => {
+      if (match) {
+          const userInfo = {
+              userId: resultUser.id,
+          };
+          const token = jToken.sign(userInfo, "secret");
+          res.send({ Token: token});
+          console.log('PASSWORD MATCH TOKEN INITIALIZE');
+      }
+      else {
+          console.log('wrong Password!');
+      }
+  })
+  
   exports.blockUser = (req, res, next) => {};
   //{"userId"=1}
   //search the user by Id

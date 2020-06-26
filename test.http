@@ -3,10 +3,10 @@ Content-Type: application/json
 
   {
 
-  "FirstName": "Amalina",
-  "LastName": "Asree",
-  "userName": "Lina",
-  "email": "Amal.Lina@gmail.com",
+  "FirstName": "Asta",
+  "LastName": "Clover",
+  "userName": "Vermilion",
+  "email": "Asta@gmail.com",
   "Password": "123456"   
 
   }
@@ -15,8 +15,8 @@ POST http://localhost:3000/admin
 Content-Type: application/json
 
     {
-      "UserName":"jimmy",
-      "Email":"Hazim.Hazimin@gmail.com",
+      "UserName":"Fortune",
+      "Email":"Fortune@gmail.com",
       "Password":"123456"
       
       }
@@ -24,13 +24,9 @@ Content-Type: application/json
 GET http://localhost:3000/userdetail
 Authorization: Bearer <sadasfsafwaf>
 
- {
-
-  "user":"userId"  
-
-  }
 
 GET http://localhost:3000/UserProfile
+Authorization: Bearer <sadasfsafwaf>
 
 GET http://localhost:3000/project-sql
 Authorization: Bearer <sadasfsafwaf>

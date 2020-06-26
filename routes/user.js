@@ -9,14 +9,19 @@ const userController = require("../controller/user");
 //connet to middlewares folder
 const userMiddlewares = require("../middlewares/user");
 
+//route for registering user
 router
   .route("/user")
   .get(userMiddlewares.authenticateUser, userController.userList)
   .post(userController.register);
 
-router.route("/user").get(userController.userDetail) 
+  //route for user detail
+  router.route("/users-details").get( userMiddleware.authUser ,userController.usersDetail);
+
+
 //router.post("/register",(req,res,next)=>{});
-router.post("/login", userController.login);
+
+router.route("/login").post(userController.login);
 
 router
   .route("/user/:userId")
