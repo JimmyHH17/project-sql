@@ -1,0 +1,85 @@
+{
+  "sqltools.connections": [
+    {
+      "askForPassword": false,
+      "database": "projectsql",
+      "driver": "MySQL",
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "name": "projectsql",
+      "password": "12345",
+      "port": 3306,
+      "previewLimit": 50,
+      "server": "localhost",
+      "username": "projectsql"
+    },
+    {
+      "askForPassword": false,
+      "database": "jimmy",
+      "driver": "PostgreSQL",
+      "name": "jimmy",
+      "password": "jimmy",
+      "port": 5432,
+      "previewLimit": 50,
+      "server": "localhost",
+      "username": "jimmy"
+    },
+    {
+      "askForPassword": false,
+      "database": "projectsql",
+      "driver": "MySQL",
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "name": "projectsql",
+      "password": "12345",
+      "port": 3306,
+      "previewLimit": 50,
+      "server": "localhost",
+      "username": "projectsql"
+    },
+    {
+      "askForPassword": false,
+      "database": "jimmy",
+      "driver": "MySQL",
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "name": "jimmy",
+      "password": "12345",
+      "port": 3306,
+      "previewLimit": 50,
+      "server": "localhost",
+      "username": "jimmy"
+    },
+    {
+      "askForPassword": false,
+      "database": "jimmy",
+      "driver": "MySQL",
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "name": "jimmy",
+      "password": "12345",
+      "port": 3306,
+      "previewLimit": 50,
+      "server": "localhost",
+      "username": "jimmy"
+    },
+    {
+      "askForPassword": false,
+      "database": "jimmy",
+      "driver": "MySQL",
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "name": "jimmy",
+      "password": "12345",
+      "port": 3306,
+      "previewLimit": 50,
+      "server": "localhost",
+      "username": "jimmy"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+POST http://localhost:3000/user
+Content-Type: application/json
+
+  {
+
+  "FirstName": "Amalina",
+  "LastName": "Asree",
+  "userName": "Lina",
+  "email": "Amal.Lina@gmail.com",
+  "Password": "123456"   
+
+  }
+
+POST http://localhost:3000/admin
+Content-Type: application/json
+
+    {
+      "UserName":"jimmy",
+      "Email":"Hazim.Hazimin@gmail.com",
+      "Password":"123456"
+      
+      }
+
+GET http://localhost:3000/userdetail
+Authorization: Bearer <sadasfsafwaf>
+
+ {
+
+  "user":"userId"  
+
+  }
+
+GET http://localhost:3000/UserProfile
+
+GET http://localhost:3000/project-sql
+Authorization: Bearer <sadasfsafwaf>
+
+PUT http://localhost:3000/UpdateUser
+Authorization: Bearer <sadasfsafwaf>
+
+PUT http://localhost:3000/BlockUser
+Authorization: Bearer <sadasfsafwaf>
+
+POST http://localhost:3000/login
+Content-Type: application/json
+//post.login
+//Get.userdetail
+//get.userprofile
+//put.updateuser
+//put.blockUser
